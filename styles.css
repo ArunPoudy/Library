@@ -1,0 +1,534 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+ 
+}
+
+/* Header CSS */
+
+header {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0 20px;
+  color: white;
+}
+
+.logo-left,
+.logo-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo-left img,
+.logo-right img {
+  height: 50px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 100px;
+  margin-right: 30px;
+}
+
+.logo-text {
+  color: #050505;
+  font-weight: bold;
+  font-size: 18px;
+  margin: auto;
+  
+}
+
+header {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Nav Bar CSS */
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  display: flex;
+}
+
+nav ul li {
+  flex: 1;
+  text-align: center;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li a:hover {
+  background-color: #ddd;
+}
+
+/* Carousel css */
+
+.carousel-container {
+  max-height: 40vh; /* Set the maximum height to 40% of the viewport height */
+  overflow: hidden;
+  position: relative; /* Added to allow for positioning of controls */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 30px; /* Adjust width and height for the perfect circle */
+  height: 30px; /* Adjust width and height for the perfect circle */
+  position: absolute; /* Added to position controls */
+  top: 50%; /* Added to vertically center controls */
+  transform: translateY(-50%); /* Added to vertically center controls */
+  background-color: #1f17c4;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 25px;
+  line-height: 30px; /* Adjust line-height for the perfect circle */
+  opacity: 0.5;
+}
+
+
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #888;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-indicators .active {
+  background-color: #1f17c4;
+}
+
+
+/* CSS for accordian and News */
+
+
+
+/* Footer CSS */
+
+footer {
+  background-color: #1f17c4;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.scroll-to-top {
+  background-color: #fff;
+  color: #1f17c4;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+/* Accordion */
+
+.accordion {
+  width: 300px;
+  margin: 20px auto 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+.item {
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 30px;
+  align-items: center;
+  padding: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  
+}
+
+h2 {
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.number {
+  font-size: 32px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: #1864ab;
+}
+
+.hidden-box {
+  grid-column: 2/3;
+  display: none;
+}
+
+
+
+.hidden-box ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hidden-box ul li {
+  margin-left: 16px;
+  line-height: 1.5;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  word-spacing: 3px;
+}
+
+.active {
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  border-top: 3px solid #1864ab;
+  animation: borderline 1s linear forwards;
+}
+
+@keyframes borderline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.active .hidden-box {
+  display: block;
+
+}
+
+/*Card- news and Achievements */
+
+.card{
+  width: 400px;
+  height: 480px;
+  margin-left: 5px;
+  top: 25px;
+  margin-right: 25px;
+
+}
+
+/*About Us*/
+.about{
+  background-color: #333;
+}
+.about-1{
+  margin:30px;
+  padding: 5px;
+  
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+  }
+ 
+}
+
+.about-1 h1{
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+.about-1 p{
+  text-align: center;
+  padding: 3px;
+  color:black;
+}
+
+.about-item{
+  margin-bottom:20px;
+  margin-top: 20px;
+  background-color: white;
+  padding: 80px, 30px;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
+
+}
+
+.about-item i{
+  font-size: 43px;
+  margin: 0;
+}
+
+.about-item h3{
+  font-size: 25px;
+  margin-bottom: 10px;
+
+}
+
+.about-item hr{
+  width: 46px;
+  height: 3px;
+  background-color: red;
+  margin: 0 auto;
+  border: none;
+  
+}
+
+.about-item p{
+  margin-top: 20px;
+  padding-bottom: 35px;
+}
+
+.about-item:hover{
+  background-color: blueviolet;
+}
+
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover p{
+  color:white;
+  
+}
+
+.about-item:hover i{
+  transform: translateY(-10px);
+  
+}
+
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover p{
+ transition: all 400md ease-in-out;
+}
+
+
+
+/*Library Features*/
+.feature-container{
+  margin-left: 35px;
+  margin-right: 35px;
+
+}
+
+.card2 {
+  display: block;
+  top: 0px;
+  position: relative;
+  max-width: 30%;
+  background-color: white;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  margin-left: 20px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  border: 2px solid #e1e4e5;
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: tomato;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(2.15);
+  }
+}
+
+
+.features h3{
+  font-family: rubik;
+  margin-top: 70px;
+  margin-bottom: 5px;
+  color: blueviolet;
+  background-color: white;
+  font-size: 32px;
+}
+
+.features p{
+  margin-bottom: 30px;
+}
+
+.text-reset{
+  text-decoration: none;
+}
+ a:hover{
+  color: #f7327a;
+  border-color: #f7327a;
+}
+
+
+/*Contact Us*/
+.social-links{
+  display: flex;
+  justify-content: center;
+}
+.social-links a{
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.4rem;
+  transition: all 0.4s ease;
+}
+.social-links a:hover{
+  color: #f7327a;
+  border-color: #f7327a;
+}
+
+
+
+/* Slick Slide */
+
+.container{
+  padding-top: 20px;
+}
+h2{
+  text-align: center;
+  padding: 20px;
+}
+.slick-slide{
+  margin: 0 20px;
+}
+.slick-slide img{
+  width: 100%;
+}
+.slick-slider{
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+.slick-list{
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slick-track{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block
+}
+.slick-slide{
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+.slick-slide img{
+  display: block;
+}
+.slick-initialized .slick-slide{
+  display: block;
+}
+.copy{
+  padding-top: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
